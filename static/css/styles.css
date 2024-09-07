@@ -1,0 +1,154 @@
+/* General styles */
+body {
+    font-family: 'Impact', sans-serif;
+    background-image: url('/static/img/requiem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3b0088;
+    padding: 0.1px;
+    border-bottom: 5px solid #ffcc00;
+    border-radius: 0 0 10px 10px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 2px 2px #000000;
+}
+
+p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+main {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 3px solid #ffcc00;
+    background: linear-gradient(135deg, #3b0088, #ffcc00);
+    box-shadow: 5px 5px 10px #000000;
+    border-radius: 10px;
+}
+
+/* Stand Display Section */
+.stand-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.stand-stats, .stand-info {
+    width: 45%;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    background-color: #3b0088;
+    box-shadow: 3px 3px 5px #000000;
+    border-radius: 10px;
+}
+
+.stand-stats h3, .stand-info h2, .stand-info h3 {
+    color: #ffcc00;
+    text-shadow: 2px 2px #000000;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.stand-stats .stats-graphic img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ffcc00;
+    box-shadow: 2px 2px 4px #000000;
+    border-radius: 10px;
+}
+
+.stand-info p, .stand-info ul {
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: left;
+}
+
+.stand-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stand-info ul li {
+    margin: 10px 0;
+}
+
+.stand-header {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    background-color: #3b0088;
+    box-shadow: 3px 3px 5px #000000;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+
+.stand-header input {
+    width: calc(70% - 20px);
+    height: 75px;
+    padding: 10px;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+    color: #000;
+}
+
+.stand-header input::placeholder {
+    color: #aaaaaa;
+}
+
+.stand-header button {
+    background-color: #ffcc00;
+    color: #3b0088;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #000000;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.stand-header button:hover {
+    background-color: #3b0088;
+    color: #ffcc00;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px #000000;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #3b0088;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #000000;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #3b0088;
+    color: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #000000;
+}
+
+.form-label {
+    font-size: 1.3em; 
+}

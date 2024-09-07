@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoJo's Stand Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>STANDO GENERATOR DESU</h1>
+        <p>Unleash your Stand with this IA Generator!</p>
+    </header>
+    <main>
+        <section class="stand-display">
+            <div class="stand-stats">
+                <h3>Stand Stats</h3>
+                <canvas id="stand-stats-graph"></canvas>
+            </div>
+            <div class="stand-info">
+                <form action="" method="post">
+                    <div class="stand-header">
+                        <label for="stand-prompt" class="form-label">STAND CONCEPT</label>
+                        <br>
+                        <h3>Enter Your Bizzare Concept</h3>
+                        <input 
+                            type="text"
+                            name="prompt"
+                            id=""
+                            aria-describedby="helpId"
+                            placeholder="Enter your question here..." 
+                            rows="4" 
+                            
+                            style="width: 70%; padding: 10px; border: 1px solid #ffcc00; border-radius: 5px; font-size: medium;">
+                        </input>
+                        <br><br>
+                        <button class="btn btn-primary" type="submit">GENERATE</button>
+                    </div>
+                </form>
+                
+                <p class="col-6 mx-auto">{{response | safe}}</p>
+
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        const ctx = document.getElementById('stand-stats-graph').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Power', 'Speed', 'Range', 'Durability', 'Precision', 'Potential'],
+                datasets: [{
+                    label: 'Stand Stats',
+                    data: [80, 60, 70, 50, 90, 100],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                    borderColor: 'rgba(255, 0, 0, 1)',
+                    pointBackgroundColor: 'rgba(255, 0, 0, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(255, 0, 0, 1)'
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true,
+                            color: '#ffcc00'
+                        },
+                        grid: {
+                            color: '#ffcc00'
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(0, 0, 0, 0)',
+                            color: '#ffffff'
+                        },
+                        pointLabels: {
+                            color: '#ffcc00',
+                            font: {
+                                size: 14,
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#ffcc00',
+                            font: {
+                                size: 18
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
